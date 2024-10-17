@@ -31,5 +31,3 @@ This is a simple implementation of the classic Snake Game using the Pygame libra
    python src/game.py
    ```
 
-## License
-This project is open-source and available for anyone to use and modify.
