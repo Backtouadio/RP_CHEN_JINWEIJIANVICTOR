@@ -159,10 +159,11 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  src/Prueba/control.py
-  src/Prueba/game_node.py
-  src/Prueba/info_user.py
-  src/Prueba/result_node.py
+  src/First_part_ros/control.py
+  src/First_part_ros/game_node.py
+  src/First_part_ros/info_user.py
+  src/First_part_ros/result_node.py
+  src/First_part_ros/control_py_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
