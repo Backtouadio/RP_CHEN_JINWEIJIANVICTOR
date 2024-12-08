@@ -1,0 +1,18 @@
+<launch>
+    <!-- Game node with parameters -->
+    <node name="game_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="game_node.py" output="screen">
+        <param name="user_name" value="default_user" type="string"/>
+        <param name="change_player_color" value="1" type="int"/>
+        <param name="screen_param" value="phase1" type="string"/>
+    </node>
+    
+    <!-- Info user node -->
+    <node name="info_user" pkg="RP_CHEN_JINWEIJIANVICTOR" type="info_user.py" output="screen"/>
+    
+    <!-- Control nodes -->
+    <node name="control_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="control.py" output="screen"/>
+    <node name="control_node_pygame" pkg="RP_CHEN_JINWEIJIANVICTOR" type="control_py_node.py" output="screen"/>
+    
+    <!-- Result node -->
+    <node name="result_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="result_node.py" output="screen"/>
+</launch>
