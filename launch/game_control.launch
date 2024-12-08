@@ -1,23 +1,21 @@
-<!--game_control.launch (Using regular control node) change type="Second_part_ros/game_node.py" to
- "First_part_ros/game_node.py" do it with all necessary files in order to do the launch properly
- also change cmakelists--> 
+<!--game_control.launch (Using regular control node) --> 
 <launch>
     <!-- Game node with parameters (no separate terminal needed) -->
-    <node name="game_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="Second_part_ros/game_node.py" output="screen">
+    <node name="game_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="game_node.py" output="screen">
         <param name="user_name" value="default_user" type="string"/>
         <param name="change_player_color" value="1" type="int"/>
         <param name="screen_param" value="phase1" type="string"/>
     </node>
     
     <!-- Info user node (separate terminal for input) -->
-    <node name="info_user" pkg="RP_CHEN_JINWEIJIANVICTOR" type="Second_part_ros/info_user.py" output="screen"
+    <node name="info_user" pkg="RP_CHEN_JINWEIJIANVICTOR" type="info_user.py" output="screen"
           launch-prefix="xterm -hold -title 'User Input' -e"/>
     
     <!-- Control node (separate terminal for control) -->
-    <node name="control_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="Second_part_ros/control.py" output="screen"
+    <node name="control_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="control.py" output="screen"
           launch-prefix="xterm -hold -title 'Game Control' -e"/>
     
     <!-- Result node (separate terminal for results) -->
-    <node name="result_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="Second_part_ros/result_node.py" output="screen"
+    <node name="result_node" pkg="RP_CHEN_JINWEIJIANVICTOR" type="result_node.py" output="screen"
           launch-prefix="xterm -hold -title 'Game Results' -e"/>
 </launch>
