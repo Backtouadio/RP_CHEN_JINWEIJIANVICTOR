@@ -490,7 +490,7 @@ class GameNode:
                 # Game over screen
                 self.window.fill(self.dark_green)
                 self.display_message(f"Game Over! Final Score: {self.current_score}", self.yellow, self.height/2)
-                self.display_message("Press R to Restar\nE to Exit\nH for homepage", self.white, self.height/2 + 100)
+                self.display_message("Press R to Restart, E to Exit, H for homepage", self.white, self.height/2 + 100)
                 
                 # Publish final score
                 self.score_pub.publish(self.current_score)
