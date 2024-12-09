@@ -459,8 +459,8 @@ class GameNode:
         """Draw pause menu overlay"""
         # Semi-transparent overlay
         overlay = pygame.Surface((self.width, self.height))
-        overlay.set_alpha(128)
-        overlay.fill(self.black)
+        overlay.set_alpha(1)  # Reduced alpha for more transparency
+        overlay.fill((100, 100, 100))  # Light gray instead of black for better visibility
         self.window.blit(overlay, (0,0))
         
         # Menu options
